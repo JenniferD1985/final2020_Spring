@@ -120,7 +120,7 @@ $H_A$ : The drug does have an effect on whether or not one contracts Aids.
 barchartGC(~infected + treatment , type = "percent", data=sexFemaleData)
 ```
 
-This barchart graph shows that the vaccine may have had an affect on whether participants aquire aids or not
+This barchart graph shows that the vaccine may have had an affect on whether participants aquire aids or not. Vaccine shows detrimental results in women that aquired it.
 
 ### Numerical Descriptive Results
 
@@ -308,7 +308,7 @@ $H_A$ : The drug does have an effect on whether or not one contracts Aids.
 barchartGC(~infected + treatment , type = "percent", data=lbgtqData)
 ```
 
-This barchart graph shows that the vaccine may have had an affect on whether participants aquire aids or not
+This barchart graph shows that the vaccine may have had an affect on whether participants aquire aids or not. Vaccine shows detrimental results in the LBGTQ population.
 
 ### Numerical Descriptive Results
 
