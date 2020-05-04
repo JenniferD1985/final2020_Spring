@@ -133,6 +133,7 @@ rowPerc(table2)
 colPerc(table2)
 ```
 
+The numerical data test shows that females that took the drug were 58.82% more likely to become infected with aids instead of those who did not take the drug were 48.06 likely to aquire aids.
 
 ### Inferential Results
 
@@ -196,6 +197,7 @@ rowPerc(table3)
 colPerc(table3)
 ```
 
+According to the numerical data men who took the drug 31.42% were likely to become infected with aids,while those that didn't take the drug were 50.38% more likely to get aids.
 
 ### Inferential Results
 
@@ -253,12 +255,13 @@ This barchart graph shows that the vaccine may have had an affect on whether Dru
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ```{r}
-table4 <- xtabs(~infected + treatment, data=sexMaleData)
+table4 <- xtabs(~infected + treatment, data=drugUsersData)
 rowPerc(table4)
 
 colPerc(table4)
 ```
 
+According to the numerical data drug users who took the drug 24.29% were likely to become infected with aids,while those that didn't take the drug were 47.59% more likely to get aids.
 
 ### Inferential Results
 
@@ -315,12 +318,13 @@ This barchart graph shows that the vaccine may have had an affect on whether par
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ```{r}
-table5 <- xtabs(~infected + treatment, data=sexFemaleData)
+table5 <- xtabs(~infected + treatment, data=lbgtqData)
 rowPerc(table5)
 
 colPerc(table5)
 ```
 
+The numerical data test shows that LGBTQ population that took the drug were 72.38% more likely to become infected with aids instead of those who did not take the drug.
 
 ### Inferential Results
 

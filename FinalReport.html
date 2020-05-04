@@ -507,6 +507,7 @@ rowPerc(table2)</code></pre>
 ##    aids    3.69    2.42
 ##    none   96.31   97.58
 ##    Total 100.00  100.00</code></pre>
+<p>The numerical data test shows that females that took the drug were 58.82% more likely to become infected with aids instead of those who did not take the drug were 48.06 likely to aquire aids.</p>
 </div>
 <div id="inferential-results-1" class="section level3">
 <h3>Inferential Results</h3>
@@ -596,6 +597,7 @@ rowPerc(table3)</code></pre>
 ##    aids    4.35    9.16
 ##    none   95.65   90.84
 ##    Total 100.00  100.00</code></pre>
+<p>According to the numerical data men who took the drug 31.42% were likely to become infected with aids,while those that didn’t take the drug were 50.38% more likely to get aids.</p>
 </div>
 <div id="inferential-results-2" class="section level3">
 <h3>Inferential Results</h3>
@@ -673,18 +675,19 @@ rowPerc(table3)</code></pre>
 <div id="numerical-descriptive-results-3" class="section level3">
 <h3>Numerical Descriptive Results</h3>
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
-<pre class="r"><code>table4 &lt;- xtabs(~infected + treatment, data=sexMaleData)
+<pre class="r"><code>table4 &lt;- xtabs(~infected + treatment, data=drugUsersData)
 rowPerc(table4)</code></pre>
 <pre><code>##         treatment
 ## infected   drug placebo  Total
-##     aids  31.42   68.58 100.00
-##     none  50.38   49.62 100.00</code></pre>
+##     aids  24.29   75.71 100.00
+##     none  47.59   52.41 100.00</code></pre>
 <pre class="r"><code>colPerc(table4)</code></pre>
 <pre><code>##         treatment
 ## infected   drug placebo
-##    aids    4.35    9.16
-##    none   95.65   90.84
+##    aids    2.89    7.77
+##    none   97.11   92.23
 ##    Total 100.00  100.00</code></pre>
+<p>According to the numerical data drug users who took the drug 24.29% were likely to become infected with aids,while those that didn’t take the drug were 47.59% more likely to get aids.</p>
 </div>
 <div id="inferential-results-3" class="section level3">
 <h3>Inferential Results</h3>
@@ -694,30 +697,30 @@ rowPerc(table4)</code></pre>
 ##  Pearson's Chi-squared test with Yates' continuity correction
 ## 
 ## data:  table4
-## X-squared = 90.194, df = 1, p-value &lt; 2.2e-16</code></pre>
+## X-squared = 27.955, df = 1, p-value = 1.242e-07</code></pre>
 <pre class="r"><code>chisqtestGC(table4)</code></pre>
 <pre><code>## Pearson's Chi-squared test with Yates' continuity correction 
 ## 
 ## Observed Counts:
 ##         treatment
 ## infected drug placebo
-##     aids  213     465
-##     none 4684    4613
+##     aids   34     106
+##     none 1143    1259
 ## 
 ## Counts Expected by Null:
 ##         treatment
 ## infected    drug placebo
-##     aids  332.85  345.15
-##     none 4564.15 4732.85
+##     aids   64.82   75.18
+##     none 1112.18 1289.82
 ## 
 ## Contributions to the chi-square statistic:
 ##         treatment
 ## infected  drug placebo
-##     aids 43.15   41.62
-##     none  3.15    3.03
+##     aids 14.66   12.64
+##     none  0.85    0.74
 ## 
 ## 
-## Chi-Square Statistic = 90.1943 
+## Chi-Square Statistic = 27.955 
 ## Degrees of Freedom of the table = 1 
 ## P-Value = 0</code></pre>
 <pre class="r"><code>fisher.test(table4)</code></pre>
@@ -725,13 +728,13 @@ rowPerc(table4)</code></pre>
 ##  Fisher's Exact Test for Count Data
 ## 
 ## data:  table4
-## p-value &lt; 2.2e-16
+## p-value = 4.23e-08
 ## alternative hypothesis: true odds ratio is not equal to 1
 ## 95 percent confidence interval:
-##  0.3798342 0.5345407
+##  0.2308342 0.5294225
 ## sample estimates:
 ## odds ratio 
-##  0.4511536</code></pre>
+##  0.3534128</code></pre>
 </div>
 </div>
 <div id="discussion-and-conclusion-3" class="section level1">
@@ -762,18 +765,19 @@ rowPerc(table4)</code></pre>
 <div id="numerical-descriptive-results-4" class="section level3">
 <h3>Numerical Descriptive Results</h3>
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
-<pre class="r"><code>table5 &lt;- xtabs(~infected + treatment, data=sexFemaleData)
+<pre class="r"><code>table5 &lt;- xtabs(~infected + treatment, data=lbgtqData)
 rowPerc(table5)</code></pre>
 <pre><code>##         treatment
 ## infected   drug placebo  Total
-##     aids  58.82   41.18 100.00
-##     none  48.06   51.94 100.00</code></pre>
+##     aids  72.38   27.62 100.00
+##     none  49.05   50.95 100.00</code></pre>
 <pre class="r"><code>colPerc(table5)</code></pre>
 <pre><code>##         treatment
 ## infected   drug placebo
-##    aids    3.69    2.42
-##    none   96.31   97.58
-##    Total 100.00  100.00</code></pre>
+##    aids    7.02     2.7
+##    none   92.98    97.3
+##    Total 100.00   100.0</code></pre>
+<p>The numerical data test shows that LGBTQ population that took the drug were 72.38% more likely to become infected with aids instead of those who did not take the drug.</p>
 </div>
 <div id="inferential-results-4" class="section level3">
 <h3>Inferential Results</h3>
@@ -783,44 +787,44 @@ rowPerc(table5)</code></pre>
 ##  Pearson's Chi-squared test with Yates' continuity correction
 ## 
 ## data:  table5
-## X-squared = 15.634, df = 1, p-value = 7.686e-05</code></pre>
+## X-squared = 20.826, df = 1, p-value = 5.029e-06</code></pre>
 <pre class="r"><code>chisqtestGC(table5)</code></pre>
 <pre><code>## Pearson's Chi-squared test with Yates' continuity correction 
 ## 
 ## Observed Counts:
 ##         treatment
 ## infected drug placebo
-##     aids  210     147
-##     none 5484    5927
+##     aids   76      29
+##     none 1007    1046
 ## 
 ## Counts Expected by Null:
 ##         treatment
 ## infected    drug placebo
-##     aids  172.74  184.26
-##     none 5521.26 5889.74
+##     aids   52.69   52.31
+##     none 1030.31 1022.69
 ## 
 ## Contributions to the chi-square statistic:
 ##         treatment
-## infected drug placebo
-##     aids 8.04    7.54
-##     none 0.25    0.24
+## infected  drug placebo
+##     aids 10.31   10.38
+##     none  0.53    0.53
 ## 
 ## 
-## Chi-Square Statistic = 15.6339 
+## Chi-Square Statistic = 20.8264 
 ## Degrees of Freedom of the table = 1 
-## P-Value = 1e-04</code></pre>
+## P-Value = 0</code></pre>
 <pre class="r"><code>fisher.test(table5)</code></pre>
 <pre><code>## 
 ##  Fisher's Exact Test for Count Data
 ## 
 ## data:  table5
-## p-value = 6.596e-05
+## p-value = 2.998e-06
 ## alternative hypothesis: true odds ratio is not equal to 1
 ## 95 percent confidence interval:
-##  1.240408 1.925729
+##  1.735490 4.369508
 ## sample estimates:
 ## odds ratio 
-##   1.543902</code></pre>
+##   2.720997</code></pre>
 </div>
 </div>
 <div id="discussion-and-conclusion-4" class="section level1">
